@@ -29,8 +29,8 @@ class KotlincService {
         }
     }
 
-    fun kotlin(ktFile: String): Array<String> {
-        var result = arrayOf<String>()
+    fun kotlin(ktFile: String): MutableList<String> {
+        val result = mutableListOf<String>()
 
         kotlinc(ktFile)
 
@@ -43,13 +43,13 @@ class KotlincService {
         val exitValue = process.waitFor()
         if (exitValue != 0) {
             println("exit with $exitValue")
-            result.plus("exit with $exitValue")
+            result.add("exit with $exitValue")
             return result
         }
 
         process.inputStream.bufferedReader().lines().forEach {
             println(it)
-            result.plus(it)
+            result.add(it)
         }
         return result
     }

@@ -18,7 +18,7 @@ class KotlincController(val kotlincService: KotlincService) {
     }
 
     @GetMapping("/kotlin")
-    fun kotlin(@RequestParam(value="ktFile") ktFile:String): Array<String> {
+    fun kotlin(@RequestParam(value="ktFile") ktFile:String): MutableList<String> {
         return kotlincService.kotlin(ktFile)
     }
 
