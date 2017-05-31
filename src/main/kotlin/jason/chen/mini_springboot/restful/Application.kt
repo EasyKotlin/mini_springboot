@@ -1,6 +1,6 @@
 package jason.chen.mini_springboot.restful
 
-import jason.chen.mini_springboot.restful.biz.CustomerService
+import jason.chen.mini_springboot.restful.service.CustomerService
 import jason.chen.mini_springboot.restful.entity.Customer
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner

@@ -4,7 +4,7 @@ buildscript {
 
     ext {
         springBootVersion = "1.5.2.RELEASE"
-        kotlinVersion = "1.1.0"
+        kotlinVersion = "1.1.2"
     }
 
     repositories {
@@ -48,6 +48,13 @@ dependencies {
 //    compile("com.h2database:h2")
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jre8
+//    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jre8', version: $kotlinVersion
+
+    // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-compiler-embeddable
+    compile("org.jetbrains.kotlin:kotlin-compiler-embeddable:$kotlinVersion")
+    compile("org.jetbrains.kotlin:kotlin-stdlib-js:$kotlinVersion")
+    
     compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.8.4")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 
