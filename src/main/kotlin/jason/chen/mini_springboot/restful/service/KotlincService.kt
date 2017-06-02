@@ -11,10 +11,14 @@ import java.io.File
 @Service
 class KotlincService {
 
+
+    /**
+     * src/main/resources/kotlinc/bin/kotlinc Primitives.kt -d ktfiles
+     */
     fun kotlinc(ktFile: String) {
         val file = File(".")
         file.listFiles().forEach(::println)
-        val kotlinc = KotlinBin.KOTLINC.binPath + " " + ktFile
+        val kotlinc = KotlinBin.KOTLINC.binPath + " " + ktFile + " -d " + KotlinBin.KOTLINC.destPath
         println(kotlinc)
         val runtime: Runtime = Runtime.getRuntime()
         val process: Process = runtime.exec(kotlinc)
@@ -29,12 +33,15 @@ class KotlincService {
         }
     }
 
+    /**
+     * src/main/resources/kotlinc/bin/kotlin -cp ktfiles PrimitivesKt
+     */
     fun kotlin(ktFile: String): MutableList<String> {
         val result = mutableListOf<String>()
 
         kotlinc(ktFile)
 
-        val ktClass = " " + ktFile.substring(0, ktFile.indexOf(".kt")) + "Kt"
+        val ktClass = " -cp " + KotlinBin.KOTLINC.destPath + " " + ktFile.substring(0, ktFile.indexOf(".kt")) + "Kt"
         println(ktClass)
         val kotlin = KotlinBin.KOTLIN.binPath + ktClass
         println(kotlin)

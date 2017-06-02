@@ -32,4 +32,5 @@ fun main(args: Array<String>) {
     val doubled = ints.map { value -> value * 2 }
     println(doubled)
 
+
 }
