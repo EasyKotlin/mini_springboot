@@ -18,7 +18,7 @@ class KotlincService {
     fun kotlinc(ktFile: String) {
         val file = File(".")
         file.listFiles().forEach(::println)
-        val kotlinc = KotlinBin.KOTLINC.binPath + " " + ktFile + " -d " + KotlinBin.KOTLINC.destPath
+        val kotlinc = KotlinBin.KOTLINC.binPath + " " + KotlinBin.KOTLINC.destPath + "/" + ktFile + " -d " + KotlinBin.KOTLINC.destPath
         println(kotlinc)
         val runtime: Runtime = Runtime.getRuntime()
         val process: Process = runtime.exec(kotlinc)

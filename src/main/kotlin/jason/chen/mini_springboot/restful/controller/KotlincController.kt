@@ -22,14 +22,6 @@ class KotlincController(val kotlincService: KotlincService) {
         return kotlincService.kotlin(ktFile)
     }
 
-    @GetMapping("/hello")
-    fun helloWorld(): String {
-        val words = mutableListOf<String>()
-        words.add("Hello")
-        words.add("World!")
-        words.add(java.util.Date().toString())
 
-        return words.joinToString(separator = " ")
-    }
 
 }
