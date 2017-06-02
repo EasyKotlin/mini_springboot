@@ -54,7 +54,7 @@ dependencies {
     // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-compiler-embeddable
     compile("org.jetbrains.kotlin:kotlin-compiler-embeddable:$kotlinVersion")
     compile("org.jetbrains.kotlin:kotlin-stdlib-js:$kotlinVersion")
-    
+
     compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.8.4")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 
@@ -74,6 +74,7 @@ dependencies {
     compile("org.webjars:jquery:2.1.4")
     // https://mvnrepository.com/artifact/org.webjars/datatables
     compile group: 'org.webjars', name: 'datatables', version: '1.10.13'
+    compile 'com.squareup:kotlinpoet:0.2.0'
 
 }
 
