@@ -22,6 +22,4 @@ class KotlincController(val kotlincService: KotlincService) {
         return kotlincService.kotlin(ktFile)
     }
 
-
-
 }

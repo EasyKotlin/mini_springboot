@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController
  * Created by jack on 2017/6/2.
  */
 @RestController
-class HelloWorld{
+class HelloWorldController{
     @GetMapping("/hello")
     fun helloWorld(): String {
         val words = mutableListOf<String>()

@@ -13,7 +13,7 @@ class KotlincService {
 
 
     /**
-     * src/main/resources/kotlinc/bin/kotlinc Primitives.kt -d ktfiles
+     * src/main/resources/kotlinc/bin/kotlinc ktfiles/Primitives.kt -d ktfiles
      */
     fun kotlinc(ktFile: String) {
         val file = File(".")
